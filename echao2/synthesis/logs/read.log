@@ -1,0 +1,162 @@
+#------------------------------------------------------------
+#
+# Basic Synthesis Script (TCL format)
+#                                  
+# Revision History                
+#   1/15/03  : Author Shane T. Gehring - from class example
+#   2/09/07  : Author Zhengtao Yu      - from class example
+#   12/14/07 : Author Ravi Jenkal      - updated to 180 nm & tcl
+#
+#------------------------------------------------------------
+#---------------------------------------------------------
+# Read in Verilog file and map (synthesize) onto a generic
+# library.
+# MAKE SURE THAT YOU CORRECT ALL WARNINGS THAT APPEAR
+# during the execution of the read command are fixed 
+# or understood to have no impact.
+# ALSO CHECK your latch/flip-flop list for unintended 
+# latches                                            
+#---------------------------------------------------------
+read_verilog $::env(RTL_FILES)
+Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/S-2021.06-SP3/libraries/syn/dw_foundation.sldb'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/S-2021.06-SP3/libraries/syn/gtech.db'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/S-2021.06-SP3/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm'
+  Loading link library 'gtech'
+Loading verilog file '/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:228: signed to unsigned assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:321: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:322: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:326: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:329: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:332: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:335: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:338: unsigned to signed assignment occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:383: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:384: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:393: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:394: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:395: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:396: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:397: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:398: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:399: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:400: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:401: signed to unsigned part selection occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:430: signed to unsigned conversion occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v:433: signed to unsigned part selection occurs. (VER-318)
+Warning: Could not open default SVF file /afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/synthesis/svf/default.svf for writing.
+
+Inferred memory devices in process
+	in routine datapath line 181 in file
+		'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'.
+=======================================================================================
+|        Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================
+| input_sram_read_address_reg | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+=======================================================================================
+
+Inferred memory devices in process
+	in routine datapath line 195 in file
+		'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'.
+=========================================================================================
+|         Register Name         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================
+| weights_sram_read_address_reg | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+=========================================================================================
+
+Inferred memory devices in process
+	in routine datapath line 209 in file
+		'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'.
+==========================================================================================
+|         Register Name          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================
+| output_sram_write_addresss_reg | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+==========================================================================================
+
+Inferred memory devices in process
+	in routine datapath line 223 in file
+		'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+| output_sram_write_data_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine datapath line 236 in file
+		'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     conv_3_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_5_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_0_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_1_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_2_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_4_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_6_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_7_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_8_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_12_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_25_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   output_data_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_24_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_23_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_22_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_21_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_20_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_19_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_18_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_17_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_16_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_15_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_14_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_13_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_11_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  shift_reg_10_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_9_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_8_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_7_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_6_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_5_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_3_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   shift_reg_4_reg   | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_2_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   input_bits_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   weight_0_1_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   weight_2_3_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   weight_4_5_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   weight_6_7_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   weight_8_9_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_0_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     conv_1_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 503 in file
+	'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           519            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 492 in file
+		'/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/dut.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  cycle_counter_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/afs/unity.ncsu.edu/users/e/echao2/ECE564/project/projectFall2022/rtl/MyDesign.db:MyDesign'
+Loaded 3 designs.
+Current design is 'MyDesign'.
+MyDesign datapath controller

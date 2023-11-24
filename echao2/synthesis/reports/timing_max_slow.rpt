@@ -1,0 +1,63 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MyDesign
+Version: S-2021.06-SP3
+Date   : Sun Nov 27 18:40:09 2022
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+Wire Load Model Mode: top
+
+  Startpoint: U2/input_bits_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: U2/conv_4_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  U2/input_bits_reg[5]/CK (DFFR_X2)      0.0000     0.0000 r
+  U2/input_bits_reg[5]/QN (DFFR_X2)      0.4545     0.4545 f
+  U3564/ZN (INV_X16)                     0.2147     0.6692 r
+  U4986/Z (XOR2_X2)                      0.4120     1.0812 r
+  U2280/ZN (NAND2_X2)                    0.0964     1.1775 f
+  U2279/ZN (NAND2_X2)                    0.1692     1.3467 r
+  U2231/ZN (XNOR2_X2)                    0.2917     1.6385 r
+  U2228/ZN (XNOR2_X2)                    0.3248     1.9632 r
+  U1466/ZN (INV_X2)                      0.0684     2.0316 f
+  U2227/ZN (NAND2_X2)                    0.1116     2.1432 r
+  U1403/ZN (INV_X2)                      0.0400     2.1832 f
+  U745/ZN (NAND2_X1)                     0.1165     2.2998 r
+  U2223/ZN (NAND3_X2)                    0.1096     2.4093 f
+  U2222/ZN (NOR2_X2)                     0.1736     2.5830 r
+  U1284/ZN (NOR2_X2)                     0.0947     2.6777 f
+  U5119/ZN (NOR2_X4)                     0.1265     2.8042 r
+  U5366/ZN (NAND2_X4)                    0.0868     2.8909 f
+  U757/ZN (INV_X4)                       0.1642     3.0551 r
+  U4642/ZN (OAI211_X2)                   0.1099     3.1650 f
+  U5765/ZN (XNOR2_X2)                    0.2530     3.4180 f
+  U2/conv_4_reg[13]/D (DFFR_X1)          0.0000     3.4180 f
+  data arrival time                                 3.4180
+
+  clock clk (rise edge)                  3.9000     3.9000
+  clock network delay (ideal)            0.0000     3.9000
+  clock uncertainty                     -0.0500     3.8500
+  U2/conv_4_reg[13]/CK (DFFR_X1)         0.0000     3.8500 r
+  library setup time                    -0.4316     3.4184
+  data required time                                3.4184
+  -----------------------------------------------------------
+  data required time                                3.4184
+  data arrival time                                -3.4180
+  -----------------------------------------------------------
+  slack (MET)                                       0.0004
+
+
+1
