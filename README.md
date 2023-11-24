@@ -5,4 +5,4 @@ Individually, implement a fixed size single stage of a convolutional neural netw
 •	Planned and executed a pipelined streaming architecture.  
 •	Debugged the architecture by simulating the code using the provided test benches and sample data files in ModelSim and by running the code through Synopsys Design Vision for synthesis.   
 
-Read project pdf for more details in the design process and verification.
+Read project report pdf for more details on the design process and verification.
